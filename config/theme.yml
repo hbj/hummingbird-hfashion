@@ -1,6 +1,6 @@
-name: hummingbird
-display_name: Hummingbird
-version: 2.1.0
+name: hfashion-limestone
+display_name: H-Fashion Limestone
+version: 1.0.0
 author:
   name: "PrestaShop Team and Contributors"
   email: "pub@prestashop.com"
@@ -35,8 +35,8 @@ global_settings:
     PS_BLOCK_BESTSELLERS_TO_DISPLAY: 4
     PRODUCTS_VIEWED_NBR: 4
     CATEGORYPRODUCTS_DISPLAY_PRODUCTS: 4
-    PSR_ICON_COLOR: "#0b69f6"
-    PSR_TEXT_COLOR: "#212529"
+    PSR_ICON_COLOR: "#2A1F14"
+    PSR_TEXT_COLOR: "#9A8A78"
   modules:
     to_disable:
       - blockwishlist
