@@ -9,7 +9,7 @@ $sub-component-name: "footer-block";
 .#{$component-name} {
   &__main {
     padding-block: 1.5rem;
-    color: var(--bs-gray-300);
+    color: var(--bs-body-color);
     background: var(--bs-dark);
   }
 
@@ -24,15 +24,23 @@ $sub-component-name: "footer-block";
 .#{$sub-component-name} {
   margin-block-end: 0.75rem;
 
+  a {
+    color: var(--bs-body-color);
+
+    &:hover {
+      color: var(--bs-white);
+    }
+  }
+
   &__title {
     position: relative;
     margin-block-end: 0.75rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--bs-white);
+    color: $gold;
 
     a {
-      color: var(--bs-white);
+      color: $gold;
     }
 
     &--toggle {
@@ -66,14 +74,6 @@ $sub-component-name: "footer-block";
       display: block;
       padding-block: 0.25rem;
       line-height: 1.5;
-    }
-  }
-
-  a {
-    color: var(--bs-gray-300);
-
-    &:hover {
-      color: var(--bs-white);
     }
   }
 

@@ -84,6 +84,8 @@
     "webpack-sources": "^3.2.3"
   },
   "dependencies": {
+    "@fontsource-variable/cormorant-garamond": "^5.2.6",
+    "@fontsource-variable/dm-sans": "^5.2.8",
     "@fontsource/inter": "^5.1.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "5.3.3",

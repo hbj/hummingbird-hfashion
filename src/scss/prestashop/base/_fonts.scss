@@ -2,11 +2,12 @@
  * For the full copyright and license information, please view the
  * LICENSE.md file that was distributed with this source code.
  */
-@import "~@fontsource/inter/100.css";
-@import "~@fontsource/inter/300.css";
-@import "~@fontsource/inter/400.css";
-@import "~@fontsource/inter/600.css";
-@import "~@fontsource/inter/700.css";
+
+// Supports weights 300-700
+@import "~@fontsource-variable/cormorant-garamond/wght.css";
+
+// Supports weights 100-900
+@import "~@fontsource-variable/dm-sans/wght.css";
 
 @font-face {
   font-family: "Material Icons";
