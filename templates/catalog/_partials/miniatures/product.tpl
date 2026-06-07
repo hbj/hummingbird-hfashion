@@ -5,19 +5,14 @@
 {$componentName = 'product-miniature'}
 
 {block name='product_miniature_item'}
-  <article
-    class="{$componentName} js-{$componentName}"
-    data-id-product="{$product.id_product}"
-    data-id-product-attribute="{$product.id_product_attribute}"
-  >
+  <article class="{$componentName} js-{$componentName}" data-id-product="{$product.id_product}"
+    data-id-product-attribute="{$product.id_product_attribute}">
     <div class="{$componentName}__inner">
       {block name='product_miniature_top'}
         <div class="{$componentName}__top">
           {include file='catalog/_partials/product-flags.tpl'}
 
           {include file='catalog/_partials/miniatures/product-image.tpl'}
-
-          {include file='catalog/_partials/miniatures/product-quickview.tpl'}
         </div>
       {/block}
 
@@ -25,7 +20,8 @@
         <div class="{$componentName}__bottom">
           <div class="{$componentName}__infos">
             {block name='product_name'}
-              <a class="{$componentName}__title" href="{$product.url}" aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">{$product.name}</a>
+              <a class="{$componentName}__title" href="{$product.url}"
+                aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">{$product.name}</a>
             {/block}
 
             {block name='product_variants'}
@@ -61,7 +57,8 @@
                       {if $product.has_discount}
                         {hook h='displayProductPriceBlock' product=$product type="old_price"}
 
-                        <span class="{$componentName}__regular-price" aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
+                        <span class="{$componentName}__regular-price"
+                          aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
                       {/if}
                     </div>
                   {/if}
@@ -77,36 +74,14 @@
           {block name='product_actions'}
             <div class="{$componentName}__actions">
               {if $product.add_to_cart_url}
-                <form class="{$componentName}__form" action="{$urls.pages.cart}" method="post">
-                  <input type="hidden" value="{$product.id_product}" name="id_product">
-                  {if $product.id_product_attribute}
-                      <input type="hidden" value="{$product.id_product_attribute}" name="id_product_attribute">
-                  {/if}
-                  <input type="hidden" name="token" value="{$static_token}">
-  
-                  <div class="quantity-button js-quantity-button">
-                    {include file='components/qty-input.tpl'
-                      attributes=[
-                        "id" => "quantity_wanted_{$product.id_product}",
-                        "value" => "{$product.quantity_wanted}",
-                        "min" => "{$product.quantity_required}"
-                      ]
-                    }
-                  </div>
-  
-                  <button 
-                    data-button-action="add-to-cart" 
-                    class="product-miniature__add btn btn-primary btn-square-icon"
-                    aria-label="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}"
-                    title="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}"
-                    data-ps-ref="add-to-cart"
-                  >
-                    <i class="material-icons" aria-hidden="true">&#xe854;</i>
-                    <span class="product-miniature__add-text">{l s='Add to cart' d='Shop.Theme.Actions'}</span>
-                  </button>
-                </form>
+                <button class="{$componentName}__quickview-button btn btn-primary w-100 js-quickview"
+                  data-ps-action="open-quickview" data-ps-ref="quickview-button"
+                  aria-label="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}">
+                  {l s='Add to cart' d='Shop.Theme.Actions'}
+                </button>
               {else}
-                <a href="{$product.url}" class="product-miniature__details btn btn-outline-primary" aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">
+                <a href="{$product.url}" class="product-miniature__details btn btn-outline-primary"
+                  aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">
                   {l s='See details' d='Shop.Theme.Actions'}
                 </a>
               {/if}

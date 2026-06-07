@@ -42,37 +42,6 @@ $product-miniature-container-query-width: 13.5rem;
     }
   }
 
-  &__quickview {
-    &-button {
-      position: absolute;
-      top: 100%;
-      z-index: 1;
-      display: flex;
-      width: 100%;
-      padding-block: 1rem;
-      margin: auto;
-      background-color: var(--bs-body-bg);
-      border-radius: 0;
-      outline: revert;
-      outline-offset: -0.125rem;
-      box-shadow: none;
-      transition: var(--bs-transition-default);
-      transition-delay: 0.1s;
-
-      &:focus {
-        transform: translateY(-100%);
-      }
-    }
-
-    &-touch {
-      position: absolute;
-      right: 0.5rem;
-      bottom: 0.5rem;
-      z-index: 10;
-      display: none;
-    }
-  }
-
   &__bottom {
     display: flex;
     flex-direction: column;
@@ -136,15 +105,9 @@ $product-miniature-container-query-width: 13.5rem;
   @media (hover: hover) {
     &__inner {
       &:hover {
-        box-shadow: var(--bs-box-shadow-md);
-
         .#{$component-name}__top {
           border-end-start-radius: 0;
           border-end-end-radius: 0;
-        }
-
-        .#{$component-name}__quickview-button {
-          transform: translateY(-100%);
         }
 
         .#{$component-name}__image {
@@ -153,28 +116,10 @@ $product-miniature-container-query-width: 13.5rem;
       }
 
       &:has(*:focus-visible) {
-        box-shadow: var(--bs-box-shadow-md);
-
         .#{$component-name}__top {
           border-end-start-radius: 0;
           border-end-end-radius: 0;
         }
-
-        .#{$component-name}__quickview-button {
-          transform: translateY(-100%);
-        }
-      }
-    }
-  }
-
-  @media (hover: none) and (pointer: coarse) {
-    &__quickview {
-      &-button {
-        display: none;
-      }
-
-      &-touch {
-        display: inline-flex;
       }
     }
   }
