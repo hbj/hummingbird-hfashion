@@ -74,7 +74,7 @@
           {block name='product_actions'}
             <div class="{$componentName}__actions">
               {if $product.add_to_cart_url}
-                <button class="{$componentName}__quickview-button btn btn-primary w-100 js-quickview"
+                <button class="{$componentName}__quickview-button btn btn-sm btn-primary w-100 js-quickview"
                   data-ps-action="open-quickview" data-ps-ref="quickview-button"
                   aria-label="{l s='Add to cart %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Actions'}">
                   {l s='Add to cart' d='Shop.Theme.Actions'}
