@@ -8,7 +8,6 @@ $component-name: products;
   .#{$component-name} {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1px;
   }
 
   @include media-breakpoint-up(xs) {
@@ -29,7 +28,6 @@ $component-name: products;
   .#{$component-name} {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
   }
 
   @include media-breakpoint-up(xs) {
@@ -49,7 +47,6 @@ $component-name: products;
   .#{$component-name} {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
   }
 
   @include media-breakpoint-up(xs) {
@@ -72,6 +69,8 @@ $component-name: products;
 }
 
 .#{$component-name} {
+  clip-path: inset(1px);
+
   &__selection {
     display: grid;
     grid-template-columns: minmax(0, 1fr);

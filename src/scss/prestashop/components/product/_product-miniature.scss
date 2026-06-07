@@ -8,6 +8,8 @@ $product-miniature-container-query-width: 13.5rem;
 .#{$component-name} {
   container-type: inline-size;
   container-name: product-miniature;
+  border-right: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid var(--bs-border-color);
 
   &__inner {
     display: flex;
