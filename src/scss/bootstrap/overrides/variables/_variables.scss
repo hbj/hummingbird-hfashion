@@ -37,7 +37,7 @@ $caret-width: 1.375em;
 $caret-vertical-align: initial;
 
 // Border radius
-$border-radius: 0.5rem;
+$border-radius: 0;
 
 // Links
 $link-decoration: none;
@@ -63,6 +63,7 @@ $box-shadow-md: 0 0.625rem 1.25rem rgba(var(--bs-black-rgb), 0.1);
 // Options
 $enable-cssgrid: true;
 $enable-rounded: false;
+$focus-ring-width: 0;
 
 // Color mode
 // Uncomment the line below to enable dark mode based on media query
