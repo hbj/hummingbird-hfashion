@@ -6,7 +6,7 @@
   class="js-product-details"
   data-product="{$product.embedded_attributes|json_encode}"
 >
-  <div class="accordion-item" id="product_details">
+  <div class="accordion-item d-none" id="product_details">
     <h2 class="accordion-header" id="product_details_heading">
       <button class="accordion-button {if $product.description}collapsed{/if}" type="button" data-bs-toggle="collapse" data-bs-target="#product_details_collapse" aria-expanded="{if !$product.description}true{else}false{/if}"
         aria-controls="product_details_collapse">
