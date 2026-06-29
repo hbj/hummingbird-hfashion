@@ -40,4 +40,78 @@ $module-name: ps-imageslider;
       height: 240px;
     }
   }
+
+  // Temporary fixes
+
+  .carousel-control-next,
+  .carousel-control-prev,
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-caption {
+    background: linear-gradient(
+      90deg,
+      rgba(244, 241, 229, 0) 0%,
+      rgba(244, 241, 229, 0.4) 20%,
+      rgba(244, 241, 229, 0.7) 50%,
+      rgba(244, 241, 229, 0.4) 80%,
+      rgba(244, 241, 229, 0) 100%
+    );
+    max-width: 24rem;
+    left: 0;
+    right: 0;
+  }
+
+  .carousel .carousel-caption .caption-description {
+    max-width: none;
+  }
+
+  .carousel-caption p,
+  .carousel-caption .h2,
+  .carousel-caption h2 {
+    color: #ae8439;
+  }
+
+  .carousel-caption p {
+    font-family: "Playfair Display", serif;
+  }
+
+  .carousel-caption .h2,
+  .carousel-caption h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .carousel-caption button {
+    font-family: Inter, sans-serif;
+    text-align: center;
+    background: #ae8439;
+    color: #ffffff;
+    padding: 8px 24px;
+    border-width: 0;
+    border-radius: 8px;
+  }
+
+  .carousel-item .carousel-content > img {
+    object-position: top 0 right -250px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .carousel-caption {
+      left: 5%;
+      right: 5%;
+    }
+
+    .carousel-item .carousel-content > img {
+      object-position: top 0 right 0;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .carousel-caption {
+      left: 5%;
+      right: 30%;
+    }
+  }
 }
