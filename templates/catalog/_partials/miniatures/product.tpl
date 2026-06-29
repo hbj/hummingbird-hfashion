@@ -80,7 +80,7 @@
                   {l s='Add to cart' d='Shop.Theme.Actions'}
                 </button>
               {else}
-                <a href="{$product.url}" class="product-miniature__details btn btn-outline-primary"
+                <a href="{$product.url}" class="product-miniature__details btn btn-sm btn-outline-primary w-100"
                   aria-label="{l s='View product %product_name%' sprintf=['%product_name%' => $product.name] d='Shop.Theme.Catalog'}">
                   {l s='See details' d='Shop.Theme.Actions'}
                 </a>
