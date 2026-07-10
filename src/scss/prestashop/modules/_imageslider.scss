@@ -9,109 +9,51 @@ $module-name: ps-imageslider;
     margin-block-end: 0;
 
     img {
-      height: auto;
+      height: 80vh;
+      object-fit: cover;
+      object-position: 10% center;
     }
   }
 
   &__figcaption {
-    color: var(--bs-light);
-    background-color: rgba(var(--bs-dark-rgb), 0.5);
-    border-radius: var(--bs-border-radius);
-    backdrop-filter: blur(10px);
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-20%);
+    bottom: auto;
 
+    h1,
     p {
       margin-block-end: 0;
     }
-  }
 
-  @include media-breakpoint-down(lg) {
-    &__figure {
-      height: 320px;
-
-      img {
-        object-fit: cover;
-        height: 100%;
-      }
+    h1 {
+      font-size: 4rem;
+      font-weight: normal;
+      margin-left: -14px;
     }
   }
 
-  @include media-breakpoint-down(md) {
-    &__figure {
-      height: 240px;
+  @include media-breakpoint-up(md) {
+    &__figcaption {
+      right: 50%;
     }
   }
 
-  // Temporary fixes
+  @include media-breakpoint-up(lg) {
+    &__figcaption {
+      left: 50%;
+      right: 0;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+  }
 
   .carousel-control-next,
   .carousel-control-prev,
   .carousel-indicators {
     display: none;
-  }
-
-  .carousel-caption {
-    background: linear-gradient(
-      90deg,
-      rgba(244, 241, 229, 0) 0%,
-      rgba(244, 241, 229, 0.4) 20%,
-      rgba(244, 241, 229, 0.7) 50%,
-      rgba(244, 241, 229, 0.4) 80%,
-      rgba(244, 241, 229, 0) 100%
-    );
-    max-width: 24rem;
-    left: 0;
-    right: 0;
-  }
-
-  .carousel .carousel-caption .caption-description {
-    max-width: none;
-  }
-
-  .carousel-caption p,
-  .carousel-caption .h2,
-  .carousel-caption h2 {
-    color: #ae8439;
-  }
-
-  .carousel-caption p {
-    font-family: "Playfair Display", serif;
-  }
-
-  .carousel-caption .h2,
-  .carousel-caption h2 {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .carousel-caption button {
-    font-family: Inter, sans-serif;
-    text-align: center;
-    background: #ae8439;
-    color: #ffffff;
-    padding: 8px 24px;
-    border-width: 0;
-    border-radius: 8px;
-  }
-
-  .carousel-item .carousel-content > img {
-    object-position: top 0 right -250px;
-  }
-
-  @include media-breakpoint-down(md) {
-    .carousel-caption {
-      left: 5%;
-      right: 5%;
-    }
-
-    .carousel-item .carousel-content > img {
-      object-position: top 0 right 0;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    .carousel-caption {
-      left: 5%;
-      right: 30%;
-    }
   }
 }
