@@ -60,6 +60,7 @@
 
       {block name='product_description_short'}
         <div class="product__description-short rich-text">{$product.description_short nofilter}</div>
+        <p><a href="/content/8-guide-des-tailles" target="_blank" class="btn btn-outline-primary btn-sm" rel="noreferrer noopener">Voir le Guide des Tailles</a></p>
       {/block}
 
       {block name='product_customization'}
